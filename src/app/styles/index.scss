@@ -1,0 +1,29 @@
+@import "reset";
+@import "variables/global";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+body {
+  font: var(--font-m);
+  color: var(--primary-color);
+  letter-spacing: 0.5px;
+}
+
+.app {
+  min-height: calc(100vh);
+  background: var(--bg-color);
+}
+
+*::-webkit-scrollbar {
+  width: 12px;
+  height: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--card-bg);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--blue-gradient);
+  border-radius: 20px;
+  bottom: 2px solid var(--primary-color);
+}

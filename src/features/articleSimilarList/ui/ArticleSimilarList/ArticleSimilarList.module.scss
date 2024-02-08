@@ -1,0 +1,16 @@
+.title * {
+  font-size: var(--font-line-s);
+  line-height: 26px;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    background: var(--blue-gradient);
+    left: 0;
+    bottom: -12px;
+    width: 44px;
+    height: 8px;
+    border-radius: 20px;
+  }
+}
