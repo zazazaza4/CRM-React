@@ -1,4 +1,4 @@
-import { FC, memo } from 'react';
+import { FC, FunctionComponent, memo, SVGAttributes } from 'react';
 
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { Avatar } from '@/shared/ui/Avatar';
@@ -11,7 +11,7 @@ import cls from './CustomerAcquisition.module.scss';
 
 interface CustomerAcquisitionProps {
   className?: string;
-  Svg: React.FunctionComponent<React.SVGAttributes<SVGElement>>;
+  Svg: FunctionComponent<SVGAttributes<SVGElement>>;
   text: string;
   number: string;
   percentageChangePerMonth?: number;

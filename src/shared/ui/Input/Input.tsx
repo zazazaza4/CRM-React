@@ -1,7 +1,9 @@
 import {
   ChangeEvent,
+  FunctionComponent,
   InputHTMLAttributes,
   memo,
+  SVGAttributes,
   useEffect,
   useRef,
   useState,
@@ -23,7 +25,7 @@ interface InputProps extends HTMLInputProps {
   value?: string | number;
   onChange?: (value: string) => void;
   autofocus?: boolean;
-  Svg?: React.FunctionComponent<React.SVGAttributes<SVGElement>>;
+  Svg?: FunctionComponent<SVGAttributes<SVGElement>>;
 }
 
 export const Input = memo(

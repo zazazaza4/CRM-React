@@ -1,8 +1,8 @@
-import React from 'react';
+import { FunctionComponent, SVGAttributes } from 'react';
 
 export interface SidebarItemType {
   path: string;
   text: string;
-  Icon: React.FunctionComponent<React.SVGAttributes<SVGElement>>;
+  Icon: FunctionComponent<SVGAttributes<SVGElement>>;
   isArrow?: boolean;
 }
