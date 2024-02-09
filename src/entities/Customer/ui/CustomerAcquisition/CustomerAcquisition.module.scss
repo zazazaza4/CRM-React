@@ -1,0 +1,22 @@
+.iconWrapper {
+  width: 84px;
+  height: 84px;
+  background: var(--gradient-light-green);
+  border-radius: 50%;
+}
+
+.avatars {
+  margin-left: 10px;
+}
+
+.avatar {
+  margin-left: -10px;
+}
+
+.negative {
+  rotate: 180deg;
+
+  * {
+    stroke: var(--color-red);
+  }
+}
