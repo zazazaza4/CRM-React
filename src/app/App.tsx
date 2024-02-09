@@ -9,9 +9,9 @@ import { AppRouter } from './providers/router';
 const App = () => {
   return (
     <VStack className={classNames('app', {}, [])}>
-      <HStack max>
+      <HStack align="start" className="app-container" max>
         <Sidebar />
-        <VStack max>
+        <VStack max align="center" className="page-wrapper">
           <Navbar />
           <AppRouter />
         </VStack>
