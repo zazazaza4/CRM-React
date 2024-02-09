@@ -1,0 +1,25 @@
+.CustomerBlock {
+  padding-top: 30px;
+  padding-left: 0;
+}
+
+.filters {
+  margin-left: 34px;
+  padding-right: 44px;
+  margin-bottom: 40px;
+}
+
+.paginationWrapper {
+  margin-top: 32px;
+  margin-bottom: 31px;
+  margin-left: 38px;
+}
+
+.search,
+.selector * {
+  background: var(--color-off-white-2);
+}
+
+.pagination {
+  padding-right: 44px;
+}
