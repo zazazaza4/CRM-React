@@ -6,7 +6,6 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 import LogoIcon from '@/shared/assets/icons/logo.svg';
 
 import { AppLink } from '../AppLink';
-import { Icon } from '../Icon';
 import { Text } from '../Text';
 
 import cls from './Logo.module.scss';
@@ -25,7 +24,7 @@ export const Logo: FC<LogoProps> = memo((props: LogoProps) => {
         to={getRouteMain()}
         className={classNames(cls.Logo, {}, [className])}
       >
-        <Icon Svg={LogoIcon} />
+        <LogoIcon />
       </AppLink>
     );
   }
@@ -35,7 +34,7 @@ export const Logo: FC<LogoProps> = memo((props: LogoProps) => {
       to={getRouteMain()}
       className={classNames(cls.Logo, {}, [className])}
     >
-      <Icon Svg={LogoIcon} />
+      <LogoIcon />
       <Text title="Dashboard" weight="semi-bold" size="size_xl" theme="black" />
       <Text className={cls.version} text="v.01" size="size_xs" />
     </AppLink>
