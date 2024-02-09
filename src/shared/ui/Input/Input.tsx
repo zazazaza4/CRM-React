@@ -60,7 +60,10 @@ export const Input = memo(
     };
 
     return (
-      <HStack className={classNames(cls.InputWrapper, {}, [className])}>
+      <HStack gap="8" className={classNames(cls.InputWrapper, {}, [className])}>
+        {Svg ? (
+          <Icon Svg={Svg} width={24} height={24} className={cls.icon} />
+        ) : null}
         <input
           type={type}
           value={value}
@@ -71,7 +74,6 @@ export const Input = memo(
           ref={ref}
           {...otherProps}
         />
-        {Svg ? <Icon Svg={Svg} className={cls.icon} /> : null}
       </HStack>
     );
   }
