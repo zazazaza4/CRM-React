@@ -23,7 +23,7 @@ export const AppImage: FC<AppImageProps> = (props) => {
   } = props;
 
   const [isLoading, setIsLoading] = useState(true);
-  const [hasError, setHasError] = useState(true);
+  const [hasError, setHasError] = useState(false);
 
   useLayoutEffect(() => {
     const img = new Image();
