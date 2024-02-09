@@ -6,7 +6,7 @@ import { componentRender } from '@/shared/lib/tests/componentRender/componentRen
 import { AppRouter } from './AppRouter';
 
 describe('app/router/AppRouter', () => {
-  test('', async () => {
+  test('MainPage', async () => {
     componentRender(<AppRouter />, {
       route: getRouteMain(),
     });
