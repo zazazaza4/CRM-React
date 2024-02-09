@@ -19,7 +19,9 @@ export const PageError: FC<PageErrorProps> = ({ className }) => {
   return (
     <VStack gap="8" className={classNames(cls.PageError, {}, [className])}>
       <Text title="Some went wrong" />
-      <Button onClick={reloadPage}>Reload page</Button>
+      <Button className={cls.button} onClick={reloadPage}>
+        Reload page
+      </Button>
     </VStack>
   );
 };
