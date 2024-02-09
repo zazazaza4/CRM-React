@@ -1,0 +1,22 @@
+.Status {
+  border-radius: 4px;
+  width: 80px;
+  text-align: center;
+}
+
+.text {
+  padding: 4px 12px;
+  margin: 0 auto;
+}
+
+.active {
+  background: var(--color-light-cyan-transparent);
+  border: 1px solid var(--color-light-cyan);
+  color: var(--color-light-cyan);
+}
+
+.inactive {
+  background: var(--color-light-pink);
+  border: 1px solid var(--color-red);
+  color: var(--color-red);
+}
