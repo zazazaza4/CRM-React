@@ -5,16 +5,14 @@ import { CustomerSortField } from '@/entities/Customer';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { Select, SelectOption } from '@/shared/ui/Select';
 
-// import cls from './ArticleSortSelector.module.scss';
-
-interface ArticleSortSelectorProps {
+interface CustomerSortSelectorProps {
   className?: string;
   sort: CustomerSortField;
   onChangeSort: (newOrder: CustomerSortField) => void;
 }
 
-export const CustomerSortSelector: FC<ArticleSortSelectorProps> = memo(
-  (props: ArticleSortSelectorProps) => {
+export const CustomerSortSelector: FC<CustomerSortSelectorProps> = memo(
+  (props: CustomerSortSelectorProps) => {
     const { onChangeSort, sort, className } = props;
 
     const sortOptions = useMemo<SelectOption<CustomerSortField>[]>(
@@ -32,8 +30,9 @@ export const CustomerSortSelector: FC<ArticleSortSelectorProps> = memo(
     );
 
     return (
-      <div className={classNames('ArticleSortSelector', {}, [className])}>
+      <div className={classNames('', {}, [className])}>
         <Select
+          id="CustomerSortSelector"
           options={sortOptions}
           label="Sort By:"
           value={sort}

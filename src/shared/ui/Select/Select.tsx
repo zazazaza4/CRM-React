@@ -18,6 +18,7 @@ interface SelectProps<T extends string> {
   value?: T;
   onChange?: (value: T) => void;
   readonly?: boolean;
+  id: string;
 }
 
 export const Select = <T extends string>({
@@ -26,6 +27,7 @@ export const Select = <T extends string>({
   options,
   value,
   onChange,
+  id,
   readonly = false,
 }: SelectProps<T>) => {
   const optionList = useMemo(
@@ -44,8 +46,13 @@ export const Select = <T extends string>({
 
   return (
     <HStack align="center" className={classNames(cls.Wrapper, {}, [className])}>
-      {label && <span className={cls.label}>{label}</span>}
+      {label && (
+        <label htmlFor={id} className={cls.label}>
+          {label}
+        </label>
+      )}
       <select
+        id={id}
         className={cls.select}
         disabled={readonly}
         value={value}
