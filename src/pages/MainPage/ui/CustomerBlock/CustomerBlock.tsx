@@ -1,4 +1,4 @@
-import { FC, memo, useCallback } from 'react';
+import { FC, memo, useCallback, useState } from 'react';
 
 import { CustomerSortSelector } from '@/features/CustomerSort';
 
@@ -22,8 +22,11 @@ interface CustomerBlockProps {
 export const CustomerBlock: FC<CustomerBlockProps> = memo(
   (props: CustomerBlockProps) => {
     const { className } = props;
+    const [sort, setSort] = useState(CustomerSortField.NEWEST);
 
-    const onChangeSort = useCallback((newSort: CustomerSortField) => {}, []);
+    const onChangeSort = useCallback((newSort: CustomerSortField) => {
+      setSort(newSort);
+    }, []);
 
     return (
       <Card className={classNames(cls.CustomerBlock, {}, [className])}>
@@ -41,7 +44,7 @@ export const CustomerBlock: FC<CustomerBlockProps> = memo(
             />
             <CustomerSortSelector
               className={cls.selector}
-              sort={CustomerSortField.NEWEST}
+              sort={sort}
               onChangeSort={onChangeSort}
             />
           </HStack>
