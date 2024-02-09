@@ -1,0 +1,24 @@
+.Wrapper {
+  display: flex;
+  border-radius: 12px;
+  padding: 12px 10px 12px 8px;
+  color: var(--input-text-color);
+  box-shadow: 0 10px 60px rgb(226 236 249 / 50%);
+}
+
+.label {
+  margin-right: 5px;
+  font: var(--font-s);
+  color: var(--color-gray-dark);
+}
+
+.select {
+  background: none;
+  cursor: pointer;
+  outline: none;
+  font: var(--font-s);
+  color: var(--primary-color);
+  padding: 0 5px 0 0;
+  border: 1px solid var(--primary-color);
+  font-weight: 600;
+}
