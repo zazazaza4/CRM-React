@@ -59,7 +59,6 @@
 - /config/babel - babel
 - /config/build - конфігурація webpack
 - /config/jest - конфігурація середовища тестування
-- /config/storybook - конфігурація storybook
 
 ---
 
@@ -74,7 +73,7 @@
 - [CustomerSort](/src/features/CustomerSort)
 - [avatarDropdown](/src/features/avatarDropdown)
 
-#### [Документація з Features](/docs/entities.md)
+#### [Документація з Features](/docs/features.md)
 
 ### Widgets
 
@@ -84,7 +83,7 @@
 - [PageLoader](/src/widgets/PageLoader)
 - [Sidebar](/src/widgets/Sidebar)
 
-#### [Документація з Widgets](/docs/entities.md)
+#### [Документація з Widgets](/docs/widgets.md)
 
 ### Pages
 
@@ -92,4 +91,4 @@
 
 ### Shared
 
-#### [Документація з Shared](/docs/entities.md)
+#### [Документація з Shared](/docs/shared.md)
