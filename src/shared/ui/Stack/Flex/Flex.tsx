@@ -1,6 +1,7 @@
 import { DetailedHTMLProps, FC, HTMLAttributes, ReactNode } from 'react';
 
 import { classNames, Mods } from '@/shared/lib/classNames/classNames';
+import { TestProps } from '@/shared/types/tests';
 
 import cls from './Flex.module.scss';
 
@@ -50,7 +51,7 @@ type DivProps = DetailedHTMLProps<
   HTMLDivElement
 >;
 
-export interface FlexProps extends DivProps {
+export interface FlexProps extends DivProps, TestProps {
   className?: string;
   children: ReactNode;
   justify?: FlexJustify;
@@ -78,6 +79,7 @@ export const Flex: FC<FlexProps> = (props: FlexProps) => {
     maxHeight,
     as: Element = 'div',
     style,
+    ...otherProps
   } = props;
 
   const classes = [
@@ -95,7 +97,11 @@ export const Flex: FC<FlexProps> = (props: FlexProps) => {
   };
 
   return (
-    <Element className={classNames(cls.Flex, mods, classes)} style={style}>
+    <Element
+      className={classNames(cls.Flex, mods, classes)}
+      style={style}
+      data-testid={props['data-testid'] ?? 'Flex'}
+    >
       {children}
     </Element>
   );
