@@ -5,7 +5,8 @@ import { Input } from '@/shared/ui/Input';
 import { HStack } from '@/shared/ui/Stack';
 import { Text } from '@/shared/ui/Text';
 
-// import SearchIcon from '@/shared/assets/icons/search.svg';
+import SearchIcon from '@/shared/assets/icons/search.svg';
+
 import cls from './Navbar.module.scss';
 
 interface NavbarProps {
@@ -14,17 +15,24 @@ interface NavbarProps {
 
 export const Navbar: FC<NavbarProps> = memo(({ className }: NavbarProps) => {
   return (
-    <header className={classNames(cls.Navbar, {}, [className])}>
-      <HStack max justify="between" className={cls.wrapper}>
-        <Text text="Hello Evano 👋🏼," />
-
-        <Input
-          className={cls.search}
-          placeholder="Search for…"
-          type="search"
-          // Svg={SearchIcon}
-        />
-      </HStack>
-    </header>
+    <HStack
+      max
+      as="header"
+      justify="between"
+      className={classNames(cls.Navbar, {}, [className])}
+    >
+      <Text
+        size="size_l"
+        weight="medium"
+        theme="black"
+        title="Hello Evano 👋🏼,"
+      />
+      <Input
+        className={cls.search}
+        placeholder="Search for…"
+        type="search"
+        Svg={SearchIcon}
+      />
+    </HStack>
   );
 });
