@@ -3,52 +3,66 @@
 }
 
 .title {
-  color: var(--primary-text-color);
+  color: var(--color-text-primary);
 }
 
 .text {
-  color: var(--primary-text-color);
-}
-
-.error {
-  .title {
-    color: var(--red-light);
-  }
-
-  .text {
-    color: var(--red-dark);
-  }
+  color: var(--color-text-primary);
 }
 
 .white {
   .title,
   .text {
-    color: var(--white-color);
+    color: var(--color-white);
   }
 }
 
-.blue {
+.dark-gray {
   .title,
   .text {
-    color: var(--primary-color);
+    color: var(--color-dark-gray-alt);
   }
 }
 
-.gradient_orange {
+.light-gray-100 {
   .title,
   .text {
-    background: var(--orange-gradient);
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--color-light-gray-100);
   }
 }
 
-.gradient_blue {
+.light-gray-200 {
   .title,
   .text {
-    background: var(--blue-gradient);
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--color-light-gray-200);
+  }
+}
+
+.black {
+  .title,
+  .text {
+    color: var(--color-black);
+  }
+}
+
+.dark-green {
+  .title,
+  .text {
+    color: var(--color-green);
+  }
+}
+
+.red {
+  .title,
+  .text {
+    color: var(--color-red);
+  }
+}
+
+.green {
+  .title,
+  .text {
+    color: var(--color-light-cyan-alt);
   }
 }
 
@@ -64,44 +78,52 @@
   text-align: center;
 }
 
-.size_s {
-  .title {
-    font: var(--font-m);
-  }
-
-  .text {
-    font: var(--font-s);
-  }
+.size_xs .title {
+  font: var(--font-s);
 }
 
-.size_m {
-  .title {
-    font: var(--font-l);
-  }
-
-  .text {
-    font: var(--font-m);
-  }
+.size_xs .text {
+  font: var(--font-xs);
 }
 
-.size_l {
-  .title {
-    font: var(--font-xl);
-  }
-
-  .text {
-    font: var(--font-l);
-  }
+.size_s .title {
+  font: var(--font-m);
 }
 
-.size_xl {
-  .title {
-    font: var(--font-xxl);
-  }
+.size_s .text {
+  font: var(--font-s);
+}
 
-  .text {
-    font: var(--font-xl);
-  }
+.size_m .title {
+  font: var(--font-l);
+}
+
+.size_m .text {
+  font: var(--font-m);
+}
+
+.size_l .title {
+  font: var(--font-xl);
+}
+
+.size_l .text {
+  font: var(--font-l);
+}
+
+.size_xl .title {
+  font: var(--font-xxl);
+}
+
+.size_xl .text {
+  font: var(--font-xl);
+}
+
+.size_xxl .title {
+  font: var(--font-xxxl);
+}
+
+.size_xxl .text {
+  font: var(--font-xxl);
 }
 
 .weight_regular * {
@@ -112,14 +134,10 @@
   font-weight: 500 !important;
 }
 
+.weight_semi-bold * {
+  font-weight: 600 !important;
+}
+
 .weight_bold * {
   font-weight: 700 !important;
-}
-
-.weight_extra-bold * {
-  font-weight: 800 !important;
-}
-
-.weight_black * {
-  font-weight: 900 !important;
 }

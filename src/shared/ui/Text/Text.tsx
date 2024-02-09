@@ -4,28 +4,38 @@ import { classNames, Mods } from '@/shared/lib/classNames/classNames';
 
 import cls from './Text.module.scss';
 
-export type TextWeight = 'regular' | 'medium' | 'black' | 'extra-bold' | 'bold';
+export type TextWeight = 'regular' | 'medium' | 'semi-bold' | 'bold';
 
 export type TextTheme =
   | 'primary'
   | 'white'
-  | 'gradient_blue'
-  | 'gradient_orange'
-  | 'blue'
-  | 'gray'
-  | 'error';
+  | 'black'
+  | 'dark-gray'
+  | 'light-gray-100'
+  | 'light-gray-200'
+  | 'green'
+  | 'red'
+  | 'dark-green';
 
 export type TextAlign = 'right' | 'left' | 'center';
 
-export type TextSize = 'size_s' | 'size_m' | 'size_l' | 'size_xl';
+export type TextSize =
+  | 'size_xs'
+  | 'size_s'
+  | 'size_m'
+  | 'size_l'
+  | 'size_xl'
+  | 'size_xxl';
 
-type HeaderTagType = 'h1' | 'h2' | 'h3' | 'h4';
+type HeaderTagType = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
 
 const mapSizeToHeaderTag: Record<TextSize, HeaderTagType> = {
-  size_s: 'h4',
-  size_m: 'h3',
-  size_l: 'h2',
-  size_xl: 'h1',
+  size_xs: 'h6',
+  size_s: 'h5',
+  size_m: 'h4',
+  size_l: 'h3',
+  size_xl: 'h2',
+  size_xxl: 'h1',
 };
 
 interface TextProps {
