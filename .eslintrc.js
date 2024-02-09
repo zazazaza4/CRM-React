@@ -33,6 +33,7 @@ module.exports = {
     '@typescript-eslint/no-unused-vars': 'off',
     'react/jsx-max-props-per-line': ['error', { maximum: 5}],
     'import/extensions': 'off',
+    'react/destructuring-assignment': 'warn',
     'import/no-extraneous-dependencies': 'off',
     'import/no-unresolved': 'off',
     'no-unused-vars': 'off',
