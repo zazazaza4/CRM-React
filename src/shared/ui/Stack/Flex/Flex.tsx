@@ -12,7 +12,7 @@ export type FlexDirection = 'row' | 'column';
 
 export type FlexWrap = 'wrap' | 'nowrap';
 
-export type FlexGap = '4' | '5' | '8' | '20' | '30' | '40' | '60';
+export type FlexGap = '4' | '8' | '14' | '16' | '20';
 
 const justifyClasses: Record<FlexJustify, string> = {
   start: cls.justifyStart,
@@ -39,12 +39,10 @@ const wrapClasses: Record<FlexWrap, string> = {
 
 const gapClasses: Record<FlexGap, string> = {
   4: cls.gap4,
-  5: cls.gap5,
   8: cls.gap8,
+  14: cls.gap14,
+  16: cls.gap16,
   20: cls.gap20,
-  30: cls.gap30,
-  40: cls.gap40,
-  60: cls.gap60,
 };
 
 type DivProps = DetailedHTMLProps<
