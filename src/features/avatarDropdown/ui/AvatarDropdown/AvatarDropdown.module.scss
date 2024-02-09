@@ -1,0 +1,13 @@
+.AvatarDropdown {
+  width: 250px;
+}
+
+.info {
+  margin-left: 12px;
+}
+
+.collapsed {
+  .info {
+    display: none;
+  }
+}
