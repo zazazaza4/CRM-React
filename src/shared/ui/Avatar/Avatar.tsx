@@ -5,7 +5,6 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 import UserIcon from '@/shared/assets/icons/user-square.svg';
 
 import { AppImage } from '../AppImage';
-import { Icon } from '../Icon';
 import { Skeleton } from '../Skeleton';
 
 import cls from './Avatar.module.scss';
@@ -28,7 +27,7 @@ export const Avatar: FC<AvatarProps> = memo(
     );
 
     const fallback = <Skeleton width={size} height={size} border="50%" />;
-    const errorFallback = <Icon Svg={UserIcon} width={size} height={size} />;
+    const errorFallback = <UserIcon width={size} height={size} />;
 
     return (
       <AppImage

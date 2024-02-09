@@ -9,7 +9,6 @@ import {
 
 import { classNames } from '@/shared/lib/classNames/classNames';
 
-import { Icon } from '../Icon';
 import { HStack } from '../Stack';
 
 import cls from './Input.module.scss';
@@ -61,9 +60,7 @@ export const Input = memo(
 
     return (
       <HStack gap="8" className={classNames(cls.InputWrapper, {}, [className])}>
-        {Svg ? (
-          <Icon Svg={Svg} width={24} height={24} className={cls.icon} />
-        ) : null}
+        {Svg ? <Svg width={24} height={24} className={cls.icon} /> : null}
         <input
           type={type}
           value={value}
