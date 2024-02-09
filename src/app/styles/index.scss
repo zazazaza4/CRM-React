@@ -3,27 +3,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 
 body {
+  min-height: 100vh;
   font: var(--font-m);
-  color: var(--primary-color);
-  letter-spacing: 0.5px;
+  color: var(--color-text-primary);
 }
 
 .app {
-  min-height: calc(100vh);
-  background: var(--bg-color);
+  min-height: 100%;
+  background: var(--color-main-bg);
 }
 
-*::-webkit-scrollbar {
-  width: 12px;
-  height: 8px;
-}
-
-*::-webkit-scrollbar-track {
-  background: var(--card-bg);
-}
-
-*::-webkit-scrollbar-thumb {
-  background-color: var(--blue-gradient);
-  border-radius: 20px;
-  bottom: 2px solid var(--primary-color);
+.page-wrapper {
+  max-width: var(--container-width);
+  margin: 0 auto;
 }
