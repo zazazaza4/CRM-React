@@ -1,0 +1,53 @@
+.Table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.headers {
+  color: var(--color-gray-light);
+}
+
+th {
+  padding: 14px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.headers th:first-child {
+  padding-left: 38px;
+}
+
+.rows td {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  font-weight: 500;
+  margin-left: 38px;
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: #ddd;
+  }
+}
+
+.rows td:first-child {
+  padding-left: 38px;
+
+  &::before {
+    width: 88%;
+  }
+}
+
+.rows td:last-child {
+  border-bottom: none;
+
+  &::before {
+    width: 88%;
+    left: 0;
+  }
+}
