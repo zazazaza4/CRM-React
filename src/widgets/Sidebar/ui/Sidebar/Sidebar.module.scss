@@ -1,43 +1,37 @@
 .Sidebar {
-  height: calc(100vh - var(--navbar-height));
+  height: 100vh;
   width: var(--sidebar-width);
   background: var(--inverted-bg-color);
-  position: relative;
+  position: sticky;
+  top: 0;
   transition: width 0.3s;
+  padding-left: 28px;
+  padding-right: 28px;
 }
 
-.switchers {
-  position: absolute;
-  bottom: 20px;
-  display: flex;
-  justify-content: center;
-  width: 100%;
+.logo {
+  margin-top: 36px;
+  margin-bottom: 64px;
 }
 
-.lang {
-  margin-left: 20px;
+.access {
+  margin-top: auto;
+  margin-bottom: 50px;
 }
 
-.collapseBtn {
-  position: absolute;
-  right: -32px;
-  bottom: 40px;
-}
-
-.items {
-  margin-top: 20px;
-  margin-left: 30px;
+.avatar {
+  margin-bottom: 75px;
 }
 
 .collapsed {
   width: var(--sidebar-width-collapsed);
 
-  .switchers {
-    flex-direction: column;
-    align-items: center;
+  .access {
+    display: none;
   }
 
-  .lang {
-    margin-left: 0;
+  .avatar {
+    width: 42px;
+    margin-top: auto;
   }
 }

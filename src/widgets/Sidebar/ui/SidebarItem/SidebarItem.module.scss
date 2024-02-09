@@ -1,16 +1,45 @@
-.link {
-  margin-left: 10px;
-  opacity: 1;
+.item {
+  padding: 11px;
+  width: 250px;
 }
 
-.icon {
-  fill: var(--inverted-secondary-color);
+.arrow {
+  margin-left: auto;
+}
+
+.active {
+  background: var(--color-primary);
+  border-radius: 8px;
+
+  .link * {
+    color: var(--color-white) !important;
+  }
+
+  .arrow path {
+    stroke: var(--color-white);
+  }
+
+  .icon path:nth-child(1),
+  .icon path:nth-child(3) {
+    fill: var(--color-white);
+  }
+
+  .icon path:nth-child(2) {
+    stroke: var(--color-white);
+  }
 }
 
 .collapsed {
+  width: 46px;
+
   .link {
     opacity: 0;
     transition: 0.1s opacity;
     width: 0;
+    display: none;
+  }
+
+  .arrow {
+    display: none;
   }
 }
